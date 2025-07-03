@@ -91,6 +91,7 @@
             // 
             // btnRefresh
             // 
+            btnRefresh.FlatStyle = FlatStyle.Popup;
             btnRefresh.ImageAlign = ContentAlignment.MiddleLeft;
             btnRefresh.ImageKey = "redo-arrow-icon.png";
             btnRefresh.ImageList = imageListProcess;
@@ -105,6 +106,7 @@
             // 
             // btnKill
             // 
+            btnKill.FlatStyle = FlatStyle.Popup;
             btnKill.ImageAlign = ContentAlignment.MiddleLeft;
             btnKill.ImageIndex = 2;
             btnKill.ImageList = imageListProcess;
@@ -137,6 +139,7 @@
             // 
             // buttonRemoveFavourite
             // 
+            buttonRemoveFavourite.FlatStyle = FlatStyle.Popup;
             buttonRemoveFavourite.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRemoveFavourite.ImageIndex = 0;
             buttonRemoveFavourite.ImageList = imageListProcess;
@@ -151,6 +154,7 @@
             // 
             // btnAddFavourite
             // 
+            btnAddFavourite.FlatStyle = FlatStyle.Popup;
             btnAddFavourite.ImageAlign = ContentAlignment.MiddleLeft;
             btnAddFavourite.ImageKey = "plus-icon.png";
             btnAddFavourite.ImageList = imageListProcess;
@@ -165,6 +169,7 @@
             // 
             // btnKillFavorites
             // 
+            btnKillFavorites.FlatStyle = FlatStyle.Popup;
             btnKillFavorites.ImageAlign = ContentAlignment.MiddleLeft;
             btnKillFavorites.ImageIndex = 1;
             btnKillFavorites.ImageList = imageListProcess;
@@ -213,8 +218,11 @@
             Controls.Add(listViewProcesses);
             Controls.Add(label1);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Task Manager Lite – Custom Process Controller";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
