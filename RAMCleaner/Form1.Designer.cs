@@ -222,7 +222,7 @@
             MinimizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Task Manager Lite – Custom Process Controller";
+            Text = "RAMCleaner – Custom Process Controller";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
