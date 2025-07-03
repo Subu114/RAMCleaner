@@ -13,6 +13,43 @@ namespace RAMCleaner
         public Form1()
         {
             InitializeComponent();
+            
+            imageListProcess.ImageSize = new Size(16,16);
+            imageListProcess.Images.Clear();
+            imageListProcess.Images.Add("refresh", RAMCleaner.Properties.Resource1.refresh);
+
+            imageListProcess.Images.Add("addFav", RAMCleaner.Properties.Resource1.addFav);
+            imageListProcess.Images.Add("remFav", RAMCleaner.Properties.Resource1.remFav);
+            imageListProcess.Images.Add("killSel", RAMCleaner.Properties.Resource1.killSel);
+            imageListProcess.Images.Add("killFav", RAMCleaner.Properties.Resource1.killFav);
+
+            btnRefresh.ImageList = imageListProcess;
+            //btnRefresh.ImageKey = "refresh";
+            int size = 16;
+            btnRefresh.Image = new Bitmap(RAMCleaner.Properties.Resource1.refresh, new Size(size, size));
+            btnKill.Image = new Bitmap(RAMCleaner.Properties.Resource1.killSel, new Size(size, size));
+            btnAddFavourite.Image = new Bitmap(RAMCleaner.Properties.Resource1.addFav, new Size(size, size));
+            btnKillFavorites.Image = new Bitmap(RAMCleaner.Properties.Resource1.killFav, new Size(size, size));
+            buttonRemoveFavourite.Image = new Bitmap(RAMCleaner.Properties.Resource1.remFav, new Size(size, size));
+           
+
+
+            btnRefresh.TextAlign = ContentAlignment.MiddleRight;
+            btnRefresh.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnKill.TextAlign = ContentAlignment.MiddleRight;
+            btnKill.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnAddFavourite.TextAlign = ContentAlignment.MiddleRight;
+            btnAddFavourite.ImageAlign = ContentAlignment.MiddleLeft;
+
+            btnKillFavorites.TextAlign = ContentAlignment.MiddleRight;
+            btnKillFavorites.ImageAlign = ContentAlignment.MiddleLeft;
+
+            buttonRemoveFavourite.TextAlign = ContentAlignment.MiddleRight;
+            buttonRemoveFavourite.ImageAlign = ContentAlignment.MiddleLeft;
+            
+            
             LoadProcesses();
             LoadFavorites();
         }

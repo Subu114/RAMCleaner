@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             listViewProcesses = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -81,20 +80,14 @@
             // imageListProcess
             // 
             imageListProcess.ColorDepth = ColorDepth.Depth32Bit;
-            imageListProcess.ImageStream = (ImageListStreamer)resources.GetObject("imageListProcess.ImageStream");
+            imageListProcess.ImageSize = new Size(16, 16);
             imageListProcess.TransparentColor = Color.Transparent;
-            imageListProcess.Images.SetKeyName(0, "minus-square-icon.png");
-            imageListProcess.Images.SetKeyName(1, "danger-icon.png");
-            imageListProcess.Images.SetKeyName(2, "recycle-bin-icon.png");
-            imageListProcess.Images.SetKeyName(3, "plus-icon.png");
-            imageListProcess.Images.SetKeyName(4, "redo-arrow-icon.png");
             // 
             // btnRefresh
             // 
             btnRefresh.FlatStyle = FlatStyle.Popup;
             btnRefresh.ImageAlign = ContentAlignment.MiddleLeft;
             btnRefresh.ImageKey = "redo-arrow-icon.png";
-            btnRefresh.ImageList = imageListProcess;
             btnRefresh.Location = new Point(44, 410);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(94, 29);
@@ -108,8 +101,6 @@
             // 
             btnKill.FlatStyle = FlatStyle.Popup;
             btnKill.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKill.ImageIndex = 2;
-            btnKill.ImageList = imageListProcess;
             btnKill.Location = new Point(197, 410);
             btnKill.Name = "btnKill";
             btnKill.Size = new Size(120, 29);
@@ -141,8 +132,6 @@
             // 
             buttonRemoveFavourite.FlatStyle = FlatStyle.Popup;
             buttonRemoveFavourite.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonRemoveFavourite.ImageIndex = 0;
-            buttonRemoveFavourite.ImageList = imageListProcess;
             buttonRemoveFavourite.Location = new Point(645, 410);
             buttonRemoveFavourite.Name = "buttonRemoveFavourite";
             buttonRemoveFavourite.Size = new Size(195, 29);
@@ -156,8 +145,7 @@
             // 
             btnAddFavourite.FlatStyle = FlatStyle.Popup;
             btnAddFavourite.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddFavourite.ImageKey = "plus-icon.png";
-            btnAddFavourite.ImageList = imageListProcess;
+            btnAddFavourite.ImageKey = "(none)";
             btnAddFavourite.Location = new Point(375, 410);
             btnAddFavourite.Name = "btnAddFavourite";
             btnAddFavourite.Size = new Size(151, 29);
@@ -171,8 +159,6 @@
             // 
             btnKillFavorites.FlatStyle = FlatStyle.Popup;
             btnKillFavorites.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKillFavorites.ImageIndex = 1;
-            btnKillFavorites.ImageList = imageListProcess;
             btnKillFavorites.Location = new Point(893, 410);
             btnKillFavorites.Name = "btnKillFavorites";
             btnKillFavorites.Size = new Size(181, 29);
